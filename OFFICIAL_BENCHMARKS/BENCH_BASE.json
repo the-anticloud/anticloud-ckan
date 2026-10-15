@@ -1,0 +1,1075 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "CKAN",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\GOVERNMENT\\CKAN\\UPSTREAM_CLONE",
+    "git": {
+      "head": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "url": "https://github.com/okfn/ckan",
+      "branch": "master",
+      "committed_at": "2026-10-01T16:43:27-04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 1318,
+    "source_files_scanned": 507,
+    "lines_of_code": 88136,
+    "languages": {
+      ".py": 476,
+      ".html": 387,
+      ".js": 85,
+      ".bugfix": 58,
+      ".feature": 55,
+      ".misc": 36,
+      ".scss": 35,
+      ".yml": 30,
+      ".txt": 27,
+      "(none)": 24,
+      ".css": 13,
+      ".sh": 11,
+      ".removal": 11,
+      ".png": 10,
+      ".yaml": 9
+    }
+  },
+  "licence": {
+    "spdx": "AGPL-3.0",
+    "class": "B",
+    "source_file": "LICENSE.txt",
+    "redistribution_allowed": false
+  },
+  "dependencies": {
+    "count": 20,
+    "unique": 20,
+    "by_ecosystem": {
+      "npm": 20
+    },
+    "list": [
+      {
+        "ecosystem": "npm",
+        "name": "@fortawesome/fontawesome-free",
+        "version": "^6.7.2",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@highlightjs/cdn-assets",
+        "version": "^11.11.1",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "@popperjs/core",
+        "version": "^2.11.8",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "bootstrap",
+        "version": "^5.3.6",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "dompurify",
+        "version": "^3.4.11",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "htmx.org",
+        "version": "^2.0.10",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "jquery",
+        "version": "^3.7.1",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "moment",
+        "version": "^2.30.1",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "qs",
+        "version": "^6.15",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "select2",
+        "version": "^4.1.0-rc.0",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "axe-core",
+        "version": "^4.10.3",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "cypress",
+        "version": "^15.18.0",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "cypress-axe",
+        "version": "^1.6.0",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "gulp",
+        "version": "^5.0.1",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "gulp-if",
+        "version": "^3.0.0",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "gulp-rename",
+        "version": "^2.0.0",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "gulp-sass",
+        "version": "^6.0.1",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "gulp-sourcemaps",
+        "version": "^2.6.5",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "pyright",
+        "version": "^1.1.402",
+        "source_file": "package.json",
+        "raw": ""
+      },
+      {
+        "ecosystem": "npm",
+        "name": "sass",
+        "version": "^1.101.3",
+        "source_file": "package.json",
+        "raw": ""
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 106,
+    "files_with_findings": 87,
+    "severity": {
+      "high": 18,
+      "medium": 7,
+      "low": 81
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "ckan/lib/search/index.py",
+            "line": 265,
+            "cwe": "CWE-327",
+            "snippet": "pkg_dict['index_id'] = hashlib.md5(six.b('%s%s' % (pkg_dict['id'],config.get('ckan.site_id')))).hexdigest()"
+          },
+          {
+            "severity": "medium",
+            "file": "ckan/model/user.py",
+            "line": 138,
+            "cwe": "CWE-327",
+            "snippet": "return md5(e).hexdigest()"
+          },
+          {
+            "severity": "medium",
+            "file": "ckanext/datastore/backend/postgres.py",
+            "line": 710,
+            "cwe": "CWE-327",
+            "snippet": "return hashlib.sha1(value).hexdigest()"
+          }
+        ]
+      },
+      "A03-Injection": {
+        "count": 19,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "bin/remove-old-git-branches.sh",
+            "line": 27,
+            "cwe": "CWE-78",
+            "snippet": "tmp_file=$(mktemp)"
+          },
+          {
+            "severity": "medium",
+            "file": "ckan/cli/views.py",
+            "line": 217,
+            "cwe": "CWE-89",
+            "snippet": "u\"View plugin(s) not found : {0}. \".format(plugins_not_found)\r\n            + u\"Have they been added to the `ckan.plugins` configuration\""
+          },
+          {
+            "severity": "high",
+            "file": "ckan/model/group.py",
+            "line": 458,
+            "cwe": "CWE-89",
+            "snippet": "SELECT c.depth + 1, m.* FROM member AS m, child AS c"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/i18n.js",
+            "line": 85,
+            "cwe": "CWE-120",
+            "snippet": "return jed.sprintf(jed.gettext(string), values || {});"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/autocomplete.js",
+            "line": 239,
+            "cwe": "CWE-78",
+            "snippet": "$(container).attr('data-value', state.id);"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/resource-reorder.js",
+            "line": 124,
+            "cwe": "CWE-78",
+            "snippet": "order.push($(this).data('id'));"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/resource-upload-field.js",
+            "line": 24,
+            "cwe": "CWE-78",
+            "snippet": "var file_name = $(this).val().split(/^C:\\\\fakepath\\\\/).pop();"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/resource-view-filters-form.js",
+            "line": 73,
+            "cwe": "CWE-78",
+            "snippet": "applyDropdown($(select), resourceId);"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/resource-view-filters.js",
+            "line": 21,
+            "cwe": "CWE-78",
+            "snippet": "$(this).select2('destroy');"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/resource-view-reorder.js",
+            "line": 112,
+            "cwe": "CWE-78",
+            "snippet": "order.push($(this).data('id'));"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/modules/table-toggle-more.js",
+            "line": 30,
+            "cwe": "CWE-78",
+            "snippet": "$(template_more).insertAfter($('.toggle-more:last-child', this.el));"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/plugins/jquery.slug-preview.js",
+            "line": 30,
+            "cwe": "CWE-78",
+            "snippet": "var element = $(this);"
+          },
+          {
+            "severity": "high",
+            "file": "ckan/public/base/javascript/plugins/jquery.slug.js",
+            "line": 31,
+            "cwe": "CWE-78",
+            "snippet": "$(this).trigger('slugify', [this.value, value]);"
+          },
+          {
+            "severity": "high",
+            "file": "ckanext/datapusher/assets/datapusher_popover.js",
+            "line": 20,
+            "cwe": "CWE-78",
+            "snippet": "$(document).on('click', '.popover-close', this._onClose);"
+          },
+          {
+            "severity": "high",
+            "file": "ckanext/datastore/backend/postgres.py",
+            "line": 1526,
+            "cwe": "CWE-89",
+            "snippet": "SELECT {distinct} {select} FROM records_page {distinct_final_statement}"
+          },
+          {
+            "severity": "high",
+            "file": "ckanext/datatablesview/assets/datatablesview.js",
+            "line": 458,
+            "cwe": "CWE-78",
+            "snippet": "const coltype = $(thecol).data('type')"
+          },
+          {
+            "severity": "high",
+            "file": "ckanext/datatablesview/assets/datatablesview_form.js",
+            "line": 2,
+            "cwe": "CWE-78",
+            "snippet": "$(document).ready(function(){"
+          },
+          {
+            "severity": "high",
+            "file": "ckanext/tabledesigner/assets/js/tabledesigner-fields.js",
+            "line": 23,
+            "cwe": "CWE-78",
+            "snippet": "$(document).on('click', 'a[name=\"tabledesigner-remove\"]', function(e) {"
+          },
+          {
+            "severity": "high",
+            "file": "cypress/e2e/module.cy.js",
+            "line": 413,
+            "cwe": "CWE-78",
+            "snippet": "describe('.$(selector)', {testIsolation: false}, function () {"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 49,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "ckan/cli/db.py",
+            "line": 61,
+            "cwe": "CWE-",
+            "snippet": "# FIXME: move to model.repo?"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/config/declaration/describe.py",
+            "line": 36,
+            "cwe": "CWE-",
+            "snippet": "avoided unless you have an irresistible desire to hack into CKAN core."
+          },
+          {
+            "severity": "low",
+            "file": "ckan/config/declaration/load.py",
+            "line": 19,
+            "cwe": "CWE-",
+            "snippet": "avoided unless you have an irresistible desire to hack into CKAN core."
+          },
+          {
+            "severity": "low",
+            "file": "ckan/config/declaration/serialize.py",
+            "line": 21,
+            "cwe": "CWE-",
+            "snippet": "avoided unless you have an irresistible desire to hack into CKAN core."
+          },
+          {
+            "severity": "low",
+            "file": "ckan/config/declaration/__init__.py",
+            "line": 229,
+            "cwe": "CWE-",
+            "snippet": "# they will be loaded directly. It looks a bit hacky, but it is not"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/config/middleware/flask_app.py",
+            "line": 298,
+            "cwe": "CWE-",
+            "snippet": "# TODO: After removal of Pylons code, switch to"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/api_token.py",
+            "line": 84,
+            "cwe": "CWE-",
+            "snippet": "# TODO: add signal for performing extra work, like removing"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/create_test_data.py",
+            "line": 659,
+            "cwe": "CWE-",
+            "snippet": "'tags':'images,graphics,photographs,photos,pictures,us,usa,america,history,wildlife,nature,war,military,todo split,gov,penguin'.split(','),"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/helpers.py",
+            "line": 596,
+            "cwe": "CWE-",
+            "snippet": "# FIXME this can be written better once the merge"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/dictization/model_dictize.py",
+            "line": 247,
+            "cwe": "CWE-",
+            "snippet": "# FIXME? extras returned and schema applied here would be really"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/search/query.py",
+            "line": 220,
+            "cwe": "CWE-",
+            "snippet": "# TODO: figure out if they change during run-time."
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/validators.py",
+            "line": 569,
+            "cwe": "CWE-",
+            "snippet": "# FIXME is this the best way to cjeck for state only?"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/__init__.py",
+            "line": 754,
+            "cwe": "CWE-",
+            "snippet": "''' Dirty hack to stop auth audit being done '''"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/create.py",
+            "line": 35,
+            "cwe": "CWE-",
+            "snippet": "# FIXME this looks nasty and should be shared better"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/get.py",
+            "line": 890,
+            "cwe": "CWE-",
+            "snippet": "## hack for pagination"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/update.py",
+            "line": 1199,
+            "cwe": "CWE-",
+            "snippet": "# FIXME check we are in that org"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/auth/create.py",
+            "line": 185,
+            "cwe": "CWE-",
+            "snippet": "# FIXME This code is shared among other logic.auth files and should be"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/auth/get.py",
+            "line": 224,
+            "cwe": "CWE-",
+            "snippet": "# FIXME this is available to sysadmins currently till"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/auth/update.py",
+            "line": 9,
+            "cwe": "CWE-",
+            "snippet": "# FIXME this import is evil and should be refactored"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/schema/__init__.py",
+            "line": 432,
+            "cwe": "CWE-",
+            "snippet": "# Todo: would like to check subject, object & type haven't changed, but"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/migration/env.py",
+            "line": 33,
+            "cwe": "CWE-",
+            "snippet": "FIXME: A number of revision tables/indexes exist only in migrations."
+          },
+          {
+            "severity": "low",
+            "file": "ckan/model/group.py",
+            "line": 133,
+            "cwe": "CWE-",
+            "snippet": "# TODO do we want to return all related packages or certain ones?"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/model/package.py",
+            "line": 166,
+            "cwe": "CWE-",
+            "snippet": "# Todo: Make sure package names can't be changed to look like package IDs?"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/model/package_relationship.py",
+            "line": 121,
+            "cwe": "CWE-",
+            "snippet": "# FIXME do we want a more specific error"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/model/resource.py",
+            "line": 40,
+            "cwe": "CWE-",
+            "snippet": "# XXX: format doc='remove_if_not_provided' makes lots of tests fail, fix tests?"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "ckan/cli/generate.py",
+            "line": 202,
+            "cwe": "CWE-1188",
+            "snippet": "show_default=True,"
+          },
+          {
+            "severity": "medium",
+            "file": "ckan/cli/sysadmin.py",
+            "line": 60,
+            "cwe": "CWE-1188",
+            "snippet": "u\"Create new user: %s?\" % username, default=True, abort=True"
+          },
+          {
+            "severity": "medium",
+            "file": "ckanext/datastore/cli.py",
+            "line": 231,
+            "cwe": "CWE-1188",
+            "snippet": "default=_TIMEOUT / 1000, show_default=True,"
+          }
+        ]
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 28,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "cypress.config.js",
+            "line": 10,
+            "cwe": "CWE-319",
+            "snippet": "baseUrl: 'http://localhost:5000/',"
+          },
+          {
+            "severity": "low",
+            "file": "bin/solr_init/create_core.sh",
+            "line": 3,
+            "cwe": "CWE-319",
+            "snippet": "SOLR_URL=${SOLR_HOST:-http://localhost:8983}"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/create_test_data.py",
+            "line": 377,
+            "cwe": "CWE-319",
+            "snippet": "pkg1.url = u'http://datahub.io'"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/flask_multistatic.py",
+            "line": 13,
+            "cwe": "CWE-319",
+            "snippet": "http://www.gnu.org/licenses/gpl.html"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/helpers.py",
+            "line": 253,
+            "cwe": "CWE-319",
+            "snippet": "return toolkit.redirect_to('http://example.com')"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/munge.py",
+            "line": 67,
+            "cwe": "CWE-319",
+            "snippet": "# Method taken from: http://code.activestate.com/recipes/251871/"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/search/index.py",
+            "line": 44,
+            "cwe": "CWE-319",
+            "snippet": "Thanks to http://goo.gl/ZziIz"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/lib/search/query.py",
+            "line": 446,
+            "cwe": "CWE-319",
+            "snippet": "# http://wiki.apache.org/solr/DisMaxQParserPlugin#mm_.28Minimum_.27Should.27_Match.29"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/validators.py",
+            "line": 1211,
+            "cwe": "CWE-319",
+            "snippet": "{\"input\": \"http://example.com\"},"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/file.py",
+            "line": 19,
+            "cwe": "CWE-319",
+            "snippet": "`file-keeper <http://pypi.org/project/file-keeper>`_ library. That library"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/get.py",
+            "line": 1729,
+            "cwe": "CWE-319",
+            "snippet": ".. _dismax: http://wiki.apache.org/solr/DisMaxQParserPlugin"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/logic/action/update.py",
+            "line": 563,
+            "cwe": "CWE-319",
+            "snippet": "update__resources__extend=[{\"name\": \"new resource\", \"url\": \"http://example.com\"}]"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/model/license.py",
+            "line": 223,
+            "cwe": "CWE-319",
+            "snippet": "url = \"http://www.opendefinition.org/licenses/odc-pddl\""
+          },
+          {
+            "severity": "low",
+            "file": "ckan/public/base/javascript/client.js",
+            "line": 17,
+            "cwe": "CWE-319",
+            "snippet": "*   client.url('/datasets'); // http://api.example.com/datasets"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/public/base/javascript/i18n.js",
+            "line": 48,
+            "cwe": "CWE-319",
+            "snippet": "// See: http://slexaxton.github.com/Jed/"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/public/base/javascript/main.js",
+            "line": 63,
+            "cwe": "CWE-319",
+            "snippet": "*   // => http://example.ckan.org/my-image.png"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/public/base/javascript/module.js",
+            "line": 357,
+            "cwe": "CWE-319",
+            "snippet": "*   // Source <div data-module-url=\"http://...\" data-module-full-name=\"fred\">"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/public/base/javascript/plugins/jquery.url-helpers.js",
+            "line": 3,
+            "cwe": "CWE-319",
+            "snippet": "* See: http://tracehello.wordpress.com/2011/06/15/jquery-real-slugify-plugin/"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/views/feed.py",
+            "line": 534,
+            "cwe": "CWE-319",
+            "snippet": "\"http://thedatahub.org/group/933f3857-79fd-4beb-a835-c0349e31ce76\""
+          },
+          {
+            "severity": "low",
+            "file": "ckanext/datastore/writer.py",
+            "line": 143,
+            "cwe": "CWE-319",
+            "snippet": "b'<data xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\\n')"
+          },
+          {
+            "severity": "low",
+            "file": "ckanext/datastore/assets/js/api-info.js",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "*   <a data-module=\"api-info\" data-module-template=\"http://example.com/path/to/template\">API</a>"
+          },
+          {
+            "severity": "low",
+            "file": "ckanext/datastore/logic/action.py",
+            "line": 716,
+            "cwe": "CWE-319",
+            "snippet": ".. _full text search query language: http://www.postgresql.org/docs/9.1/static/datatype-textsearch.html#DATATYPE-TSQUERY"
+          },
+          {
+            "severity": "low",
+            "file": "cypress/e2e/ckan.cy.js",
+            "line": 58,
+            "cwe": "CWE-319",
+            "snippet": "win.ckan.SITE_ROOT = 'http://example.com';"
+          },
+          {
+            "severity": "low",
+            "file": "cypress/e2e/client.cy.js",
+            "line": 27,
+            "cwe": "CWE-319",
+            "snippet": "let client = new this.Client({endpoint: 'http://example.com'});"
+          },
+          {
+            "severity": "low",
+            "file": "cypress/e2e/module.cy.js",
+            "line": 331,
+            "cwe": "CWE-319",
+            "snippet": "'data-module-url': 'http://example.com/path/to.html',"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 4,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "ckan/lib/helpers.py",
+            "line": 276,
+            "cwe": "CWE-601",
+            "snippet": "return cast(Response, _flask_redirect(_url))"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/views/dataset.py",
+            "line": 145,
+            "cwe": "CWE-601",
+            "snippet": "def _form_save_redirect(pkg_name: str,"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/views/home.py",
+            "line": 99,
+            "cwe": "CWE-601",
+            "snippet": "return redirect(url, code=308)"
+          },
+          {
+            "severity": "low",
+            "file": "ckan/views/util.py",
+            "line": 17,
+            "cwe": "CWE-601",
+            "snippet": "def internal_redirect() -> Response:"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 6,
+    "files_with_findings": 6,
+    "severity": {
+      "high": 0,
+      "medium": 6,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 4,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "ckan/cli/generate.py",
+            "line": 181,
+            "cwe": "CWE-1336",
+            "snippet": "template = string.Template(file_in.read())"
+          },
+          {
+            "severity": "medium",
+            "file": "ckan/lib/pagination.py",
+            "line": 487,
+            "cwe": "CWE-1336",
+            "snippet": "result = Template(result).safe_substitute("
+          },
+          {
+            "severity": "medium",
+            "file": "ckanext/activity/helpers.py",
+            "line": 103,
+            "cwe": "CWE-1336",
+            "snippet": "template = jinja2.Template("
+          },
+          {
+            "severity": "medium",
+            "file": "ckanext/datastore/assets/js/api-info.js",
+            "line": 64,
+            "cwe": "CWE-1336",
+            "snippet": "this.loadTemplate().done(function (html) {"
+          }
+        ]
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "ckan/views/resource.py",
+            "line": 640,
+            "cwe": "CWE-20",
+            "snippet": "view = json.loads(request.args.get(u'resource_view', u''))"
+          },
+          {
+            "severity": "medium",
+            "file": "ckanext/datatablesview/blueprint.py",
+            "line": 166,
+            "cwe": "CWE-20",
+            "snippet": "params = json.loads(request.form[u'params'])"
+          }
+        ]
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:37b0d721-7bd6-5308-9a82-837049095cfa",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T16:36:11Z",
+      "component": {
+        "type": "application",
+        "name": "CKAN",
+        "version": "cb8172446c46",
+        "bom-ref": "pkg:generic/anticloud/CKAN@cb8172446c46",
+        "purl": "pkg:generic/anticloud/CKAN@cb8172446c46",
+        "licenses": [
+          {
+            "license": {
+              "id": "AGPL-3.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "cb8172446c463316efdf12a3e5aa0e0d386adf32"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/okfn/ckan"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "@fortawesome/fontawesome-free",
+        "version": "^6.7.2",
+        "purl": "pkg:npm/@fortawesome/fontawesome-free@^6.7.2",
+        "bom-ref": "npm/@fortawesome/fontawesome-free@^6.7.2"
+      },
+      {
+        "type": "library",
+        "name": "@highlightjs/cdn-assets",
+        "version": "^11.11.1",
+        "purl": "pkg:npm/@highlightjs/cdn-assets@^11.11.1",
+        "bom-ref": "npm/@highlightjs/cdn-assets@^11.11.1"
+      },
+      {
+        "type": "library",
+        "name": "@popperjs/core",
+        "version": "^2.11.8",
+        "purl": "pkg:npm/@popperjs/core@^2.11.8",
+        "bom-ref": "npm/@popperjs/core@^2.11.8"
+      },
+      {
+        "type": "library",
+        "name": "bootstrap",
+        "version": "^5.3.6",
+        "purl": "pkg:npm/bootstrap@^5.3.6",
+        "bom-ref": "npm/bootstrap@^5.3.6"
+      },
+      {
+        "type": "library",
+        "name": "dompurify",
+        "version": "^3.4.11",
+        "purl": "pkg:npm/dompurify@^3.4.11",
+        "bom-ref": "npm/dompurify@^3.4.11"
+      },
+      {
+        "type": "library",
+        "name": "htmx.org",
+        "version": "^2.0.10",
+        "purl": "pkg:npm/htmx.org@^2.0.10",
+        "bom-ref": "npm/htmx.org@^2.0.10"
+      },
+      {
+        "type": "library",
+        "name": "jquery",
+        "version": "^3.7.1",
+        "purl": "pkg:npm/jquery@^3.7.1",
+        "bom-ref": "npm/jquery@^3.7.1"
+      },
+      {
+        "type": "library",
+        "name": "moment",
+        "version": "^2.30.1",
+        "purl": "pkg:npm/moment@^2.30.1",
+        "bom-ref": "npm/moment@^2.30.1"
+      },
+      {
+        "type": "library",
+        "name": "qs",
+        "version": "^6.15",
+        "purl": "pkg:npm/qs@^6.15",
+        "bom-ref": "npm/qs@^6.15"
+      },
+      {
+        "type": "library",
+        "name": "select2",
+        "version": "^4.1.0-rc.0",
+        "purl": "pkg:npm/select2@^4.1.0-rc.0",
+        "bom-ref": "npm/select2@^4.1.0-rc.0"
+      },
+      {
+        "type": "library",
+        "name": "axe-core",
+        "version": "^4.10.3",
+        "purl": "pkg:npm/axe-core@^4.10.3",
+        "bom-ref": "npm/axe-core@^4.10.3"
+      },
+      {
+        "type": "library",
+        "name": "cypress",
+        "version": "^15.18.0",
+        "purl": "pkg:npm/cypress@^15.18.0",
+        "bom-ref": "npm/cypress@^15.18.0"
+      },
+      {
+        "type": "library",
+        "name": "cypress-axe",
+        "version": "^1.6.0",
+        "purl": "pkg:npm/cypress-axe@^1.6.0",
+        "bom-ref": "npm/cypress-axe@^1.6.0"
+      },
+      {
+        "type": "library",
+        "name": "gulp",
+        "version": "^5.0.1",
+        "purl": "pkg:npm/gulp@^5.0.1",
+        "bom-ref": "npm/gulp@^5.0.1"
+      },
+      {
+        "type": "library",
+        "name": "gulp-if",
+        "version": "^3.0.0",
+        "purl": "pkg:npm/gulp-if@^3.0.0",
+        "bom-ref": "npm/gulp-if@^3.0.0"
+      },
+      {
+        "type": "library",
+        "name": "gulp-rename",
+        "version": "^2.0.0",
+        "purl": "pkg:npm/gulp-rename@^2.0.0",
+        "bom-ref": "npm/gulp-rename@^2.0.0"
+      },
+      {
+        "type": "library",
+        "name": "gulp-sass",
+        "version": "^6.0.1",
+        "purl": "pkg:npm/gulp-sass@^6.0.1",
+        "bom-ref": "npm/gulp-sass@^6.0.1"
+      },
+      {
+        "type": "library",
+        "name": "gulp-sourcemaps",
+        "version": "^2.6.5",
+        "purl": "pkg:npm/gulp-sourcemaps@^2.6.5",
+        "bom-ref": "npm/gulp-sourcemaps@^2.6.5"
+      },
+      {
+        "type": "library",
+        "name": "pyright",
+        "version": "^1.1.402",
+        "purl": "pkg:npm/pyright@^1.1.402",
+        "bom-ref": "npm/pyright@^1.1.402"
+      },
+      {
+        "type": "library",
+        "name": "sass",
+        "version": "^1.101.3",
+        "purl": "pkg:npm/sass@^1.101.3",
+        "bom-ref": "npm/sass@^1.101.3"
+      }
+    ]
+  },
+  "elapsed_seconds": 542.26
+}

@@ -1,0 +1,179 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:37b0d721-7bd6-5308-9a82-837049095cfa",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T16:36:11Z",
+    "component": {
+      "type": "application",
+      "name": "CKAN",
+      "version": "cb8172446c46",
+      "bom-ref": "pkg:generic/anticloud/CKAN@cb8172446c46",
+      "purl": "pkg:generic/anticloud/CKAN@cb8172446c46",
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "cb8172446c463316efdf12a3e5aa0e0d386adf32"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/okfn/ckan"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "@fortawesome/fontawesome-free",
+      "version": "^6.7.2",
+      "purl": "pkg:npm/@fortawesome/fontawesome-free@^6.7.2",
+      "bom-ref": "npm/@fortawesome/fontawesome-free@^6.7.2"
+    },
+    {
+      "type": "library",
+      "name": "@highlightjs/cdn-assets",
+      "version": "^11.11.1",
+      "purl": "pkg:npm/@highlightjs/cdn-assets@^11.11.1",
+      "bom-ref": "npm/@highlightjs/cdn-assets@^11.11.1"
+    },
+    {
+      "type": "library",
+      "name": "@popperjs/core",
+      "version": "^2.11.8",
+      "purl": "pkg:npm/@popperjs/core@^2.11.8",
+      "bom-ref": "npm/@popperjs/core@^2.11.8"
+    },
+    {
+      "type": "library",
+      "name": "bootstrap",
+      "version": "^5.3.6",
+      "purl": "pkg:npm/bootstrap@^5.3.6",
+      "bom-ref": "npm/bootstrap@^5.3.6"
+    },
+    {
+      "type": "library",
+      "name": "dompurify",
+      "version": "^3.4.11",
+      "purl": "pkg:npm/dompurify@^3.4.11",
+      "bom-ref": "npm/dompurify@^3.4.11"
+    },
+    {
+      "type": "library",
+      "name": "htmx.org",
+      "version": "^2.0.10",
+      "purl": "pkg:npm/htmx.org@^2.0.10",
+      "bom-ref": "npm/htmx.org@^2.0.10"
+    },
+    {
+      "type": "library",
+      "name": "jquery",
+      "version": "^3.7.1",
+      "purl": "pkg:npm/jquery@^3.7.1",
+      "bom-ref": "npm/jquery@^3.7.1"
+    },
+    {
+      "type": "library",
+      "name": "moment",
+      "version": "^2.30.1",
+      "purl": "pkg:npm/moment@^2.30.1",
+      "bom-ref": "npm/moment@^2.30.1"
+    },
+    {
+      "type": "library",
+      "name": "qs",
+      "version": "^6.15",
+      "purl": "pkg:npm/qs@^6.15",
+      "bom-ref": "npm/qs@^6.15"
+    },
+    {
+      "type": "library",
+      "name": "select2",
+      "version": "^4.1.0-rc.0",
+      "purl": "pkg:npm/select2@^4.1.0-rc.0",
+      "bom-ref": "npm/select2@^4.1.0-rc.0"
+    },
+    {
+      "type": "library",
+      "name": "axe-core",
+      "version": "^4.10.3",
+      "purl": "pkg:npm/axe-core@^4.10.3",
+      "bom-ref": "npm/axe-core@^4.10.3"
+    },
+    {
+      "type": "library",
+      "name": "cypress",
+      "version": "^15.18.0",
+      "purl": "pkg:npm/cypress@^15.18.0",
+      "bom-ref": "npm/cypress@^15.18.0"
+    },
+    {
+      "type": "library",
+      "name": "cypress-axe",
+      "version": "^1.6.0",
+      "purl": "pkg:npm/cypress-axe@^1.6.0",
+      "bom-ref": "npm/cypress-axe@^1.6.0"
+    },
+    {
+      "type": "library",
+      "name": "gulp",
+      "version": "^5.0.1",
+      "purl": "pkg:npm/gulp@^5.0.1",
+      "bom-ref": "npm/gulp@^5.0.1"
+    },
+    {
+      "type": "library",
+      "name": "gulp-if",
+      "version": "^3.0.0",
+      "purl": "pkg:npm/gulp-if@^3.0.0",
+      "bom-ref": "npm/gulp-if@^3.0.0"
+    },
+    {
+      "type": "library",
+      "name": "gulp-rename",
+      "version": "^2.0.0",
+      "purl": "pkg:npm/gulp-rename@^2.0.0",
+      "bom-ref": "npm/gulp-rename@^2.0.0"
+    },
+    {
+      "type": "library",
+      "name": "gulp-sass",
+      "version": "^6.0.1",
+      "purl": "pkg:npm/gulp-sass@^6.0.1",
+      "bom-ref": "npm/gulp-sass@^6.0.1"
+    },
+    {
+      "type": "library",
+      "name": "gulp-sourcemaps",
+      "version": "^2.6.5",
+      "purl": "pkg:npm/gulp-sourcemaps@^2.6.5",
+      "bom-ref": "npm/gulp-sourcemaps@^2.6.5"
+    },
+    {
+      "type": "library",
+      "name": "pyright",
+      "version": "^1.1.402",
+      "purl": "pkg:npm/pyright@^1.1.402",
+      "bom-ref": "npm/pyright@^1.1.402"
+    },
+    {
+      "type": "library",
+      "name": "sass",
+      "version": "^1.101.3",
+      "purl": "pkg:npm/sass@^1.101.3",
+      "bom-ref": "npm/sass@^1.101.3"
+    }
+  ]
+}
